@@ -9,7 +9,7 @@
     
     <title>
         
-            Hello World |
+            clash for linux |
         
         我是SunnyYang
     </title>
@@ -167,7 +167,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">Hello World</span>
+                <span class="title-hover-animation">clash for linux</span>
             </div>
 
             
@@ -189,22 +189,33 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-07-18 17:59:28</span>
-        <span class="mobile">2023-07-18 17:59</span>
+        <span class="pc">2023-07-18 22:02:51</span>
+        <span class="mobile">2023-07-18 22:02</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-07-18 17:59:28</span>
+        <span class="pc">2023-07-18 22:12:21</span>
     </span>
     
     
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/tools/">tools</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>75 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>656 Words</span>
         </span>
     
     
@@ -219,44 +230,90 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <p>Clash 是一个使用 Go 语言编写，基于规则的跨平台代理软件核心程序。</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/Dreamacro/clash/releases/download/v1.13.0/clash-linux-amd64-v1.13.0.gz</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>最新版本 <a class="link"   target="_blank" rel="noopener" href="https://github.com/Dreamacro/clash/releases" >https://github.com/Dreamacro/clash/releases<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>解压后直接执行，将在 <code>~/.config/</code> 目录下生成一个 clash 目录，其中有配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gzip -d clash-linux-amd64-v1.13.0.gz</span><br><span class="line">chmod +x clash-linux-amd64-v1.13.0</span><br><span class="line">./clash-linux-amd64-v1.13.0</span><br><span class="line">INFO[0000] Can&#x27;t find config, create a initial config file</span><br><span class="line">INFO[0000] Can&#x27;t find MMDB, start download</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>为了后期管理方便，可以之间将解压后的 clash 拷贝到 <code>~/.config/clash</code> 目录下，并重命名为 clash</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cp ./clash-linux-amd64-v1.13.0 ~/.config/clash/clash</span><br><span class="line"></span><br><span class="line">$ls ~/.config/clash/</span><br><span class="line">clash  config.yaml</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>下载配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -O config.yaml &quot;代理商提供的订阅链接&quot;</span><br><span class="line">wget -O config.yaml &quot;https://xxxxxxxxxxxxxxxxxx06d2739906177ad22&amp;flag=clash&quot;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<blockquote>
+<p>如果下载到的是一大堆字符则需要在订阅链接的后面添加 <strong>&amp;flag&#x3D;clash</strong></p>
+</blockquote>
+<p>执行<code>./clash</code>，将会下载 <code>Country.mmdb</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./clash</span><br><span class="line">WARN[0000] MMDB invalid, remove and download</span><br></pre></td></tr></table></figure>
+
+<p>如果下载失败进行手动下载</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$./clash</span><br><span class="line">WARN[0000] MMDB invalid, remove and download</span><br><span class="line">FATA[0030] Initial configuration directory error: can&#x27;t initial MMDB: can&#x27;t download MMDB: Get &quot;https://cdn.jsdelivr.net/gh/Dreamacro/maxmind-geoip@release/Country.mmdb&quot;: dial tcp 146.75.113.229:443: i/o timeout</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O Country.mmdb https://www.sub-speeder.com/client-download/Country.mmdb</span><br></pre></td></tr></table></figure>
+
+<p>在 <a class="link"   target="_blank" rel="noopener" href="https://github.com/Dreamacro/maxmind-geoip/releases" >https://github.com/Dreamacro/maxmind-geoip/releases<i class="fas fa-external-link-alt"></i></a> 下载也可以</p>
+<p>以上准备配置文件弄号后就可以运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">~/.config/clash</span><br><span class="line">↪ =&gt;$ls</span><br><span class="line">clash  config.yaml  Country.mmdb</span><br><span class="line"></span><br><span class="line">↪ =&gt;$./clash</span><br><span class="line">INFO[0000] Start initial compatible provider 故障转移</span><br><span class="line">INFO[0000] Start initial compatible provider 自动选择</span><br><span class="line">INFO[0000] Start initial compatible provider 一元机场</span><br><span class="line">INFO[0000] RESTful API listening at: 127.0.0.1:9090</span><br><span class="line">INFO[0000] Mixed(http+socks) proxy listening at: [::]:7890</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>clash</code> 启动后用浏览器访问网址 <code>http://clash.razord.top/</code> ，在这里修改配置信息</p>
+<p>命令行设置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">gsettings set org.gnome.system.proxy.http host &#x27;127.0.0.1&#x27;</span><br><span class="line">gsettings set org.gnome.system.proxy.http port 7890</span><br><span class="line">gsettings set org.gnome.system.proxy.https host &#x27;127.0.0.1&#x27;</span><br><span class="line">gsettings set org.gnome.system.proxy.https port 7890</span><br><span class="line">gsettings set org.gnome.system.proxy.ftp host &#x27;&#x27;</span><br><span class="line">gsettings set org.gnome.system.proxy.ftp port 0</span><br><span class="line">gsettings set org.gnome.system.proxy.socks host &#x27;127.0.0.1&#x27;</span><br><span class="line">gsettings set org.gnome.system.proxy.socks port 7890</span><br><span class="line"></span><br><span class="line">gsettings set org.gnome.system.proxy mode &#x27;manual&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="git-代理"><a href="#git-代理" class="headerlink" title="git 代理"></a>git 代理</h4><p>https 传输</p>
+<ul>
+<li><p>http 代理</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy &#x27;http://127.0.0.1:1080&#x27;</span><br><span class="line">git config --global https.proxy &#x27;http://127.0.0.1:1080&#x27;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>socks5 代理</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy &#x27;socks5://127.0.0.1:1081&#x27;  </span><br><span class="line">git config --global https.proxy &#x27;socks5://127.0.0.1:1081&#x27;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>取消代理</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy  </span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/366589407" >如何在 Linux 中使用 Clash<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://www.alvinkwok.cn/2022/01/29/2022/01/Clash%20For%20Linux%20Install%20Guide/" >CLash for Linux 安装配置<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://blog.zzsqwq.cn/posts/how-to-use-clash-on-linux/" >如何在 Linux 上优雅的使用 Clash？<i class="fas fa-external-link-alt"></i></a> —— Docker</li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://winddoing.github.io/post/9992854.html" >clash for linux–Winddoing’s Notes<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
 
             </div>
 
             
 
             
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/tools/">#tools</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
 
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2023/07/18/first-page/"
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/07/18/test-my-site/"
                             >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">test_my_site</span>
+                                <span class="post-nav-item">Next posts</span>
                             </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">first-page</span>
-                                <span class="post-nav-item">Prev posts</span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
                             </span>
                             </a>
                         </div>
-                    
                     
                 </div>
             
@@ -268,7 +325,7 @@
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#git-%E4%BB%A3%E7%90%86"><span class="nav-text">git 代理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text">参考</span></a></li></ol>
     </div>
 </div>
 
