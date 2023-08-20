@@ -160,6 +160,91 @@
     
     
     <article
+  id="post-kali安装Ghidra插件FindCrypto"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/08/20/kali%E5%AE%89%E8%A3%85Ghidra%E6%8F%92%E4%BB%B6FindCrypto/"
+    >kali安装Ghidra插件FindCrypto</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/08/20/kali%E5%AE%89%E8%A3%85Ghidra%E6%8F%92%E4%BB%B6FindCrypto/" class="article-date">
+  <time datetime="2023-08-20T11:37:58.000Z" itemprop="datePublished">2023-08-20</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="kali安装Ghidra插件FindCrypto"><a href="#kali安装Ghidra插件FindCrypto" class="headerlink" title="kali安装Ghidra插件FindCrypto"></a>kali安装Ghidra插件FindCrypto</h1><h2 id="安装地址"><a href="#安装地址" class="headerlink" title="安装地址"></a>安装地址</h2><p><a target="_blank" rel="noopener" href="https://github.com/d3v1l401/FindCrypt-Ghidra">https://github.com/d3v1l401/FindCrypt-Ghidra</a></p>
+<h2 id="输入命令"><a href="#输入命令" class="headerlink" title="输入命令"></a>输入命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd FindCrypt</span><br><span class="line"></span><br><span class="line">GHIDRA_INSTALL_DIR=/home/kali/ghidra_first/ghidra_10.3.1_PUBLIC  gradle </span><br></pre></td></tr></table></figure>
+
+<h2 id="报错处理"><a href="#报错处理" class="headerlink" title="报错处理"></a>报错处理</h2><p>但是gradle版本过低出现报错<br>What went wrong:<br>A problem occurred evaluating script.<br>Requires at least Gradle 7.3, but was run with 4.4.1<br><strong>不要</strong>直接sudo apt install gradle，这样永远都是下载4.4.1版本的，于是要下载高版本的gradle<br><a target="_blank" rel="noopener" href="https://services.gradle.org/distributions/">https://services.gradle.org/distributions/</a><br><strong>不能</strong>这样替换，会报错，不要这么干，这是某个csdn上的，自己尝试是不行的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo cp -r /usr/share/gradle /usr/share/gradle_bak</span><br><span class="line">sudo cp -r ./gradle-6.9/* /usr/share/gradle </span><br><span class="line">#复制完成后执行下面一条命令，确认版本是否替换： </span><br><span class="line">gradle -v</span><br></pre></td></tr></table></figure>
+<p><strong>我的</strong>正确做法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">解压下载好的zip文件，然后开始配置环境变量</span><br><span class="line">在 /etc/profile.d下创建 gradle.sh文件</span><br><span class="line">export GRADLE_HOME=/home/kali/file/gradle-7.3</span><br><span class="line">export PATH=$PATH:$GRADLE_HOME/bin</span><br><span class="line">export GRADLE_USER_HOME=/home/kali/file/gradle-7.3/bin/.gradle</span><br><span class="line"></span><br><span class="line">/etc/profile也需要加入内容</span><br><span class="line">#gradle</span><br><span class="line">export PATH=$PATH:/soft/gradle-6.5.1/bin</span><br><span class="line"></span><br><span class="line">修改配置后，立即生效，执行</span><br><span class="line">source /etc/profile</span><br><span class="line">[为什么每次进入命令都要重新source /etc/profile 才能生效？[https://blog.csdn.net/lwplvx/article/details/79192182](https://blog.csdn.net/lwplvx/article/details/79192182)]</span><br><span class="line"></span><br><span class="line">[source /etc/profile作用](https://blog.csdn.net/llzhang_fly/article/details/104980029)</span><br><span class="line">查看gradle的版本信息 </span><br><span class="line">gradle -version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p> gradle安好了，再次重复：一定不能用sudo的方法<br><img src="https://cdn.staticaly.com/gh/SunnyYANGyaya/picx-images-hosting@master/20230820/Snipaste_2023-08-16_20-38-45.3v0jqe5hfc80.webp" alt="Snipaste_2023-08-16_20-38-45"></p>
+<h2 id="继续"><a href="#继续" class="headerlink" title="继续"></a>继续</h2><p>但是findcrypt依然不能build<br><img src="https://cdn.staticaly.com/gh/SunnyYANGyaya/picx-images-hosting@master/20230820/Snipaste_2023-08-16_20-58-39.1eixx3zak0o0.webp" alt="Snipaste_2023-08-16_20-58-39"></p>
+<p>仔细看了一下报错信息，把help文件夹给删掉了，然后就好了，好像也不影响后面的插件导入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ GHIDRA_INSTALL_DIR=/home/kali/ghidra_first/ghidra_10.3.1_PUBLIC  gradle</span><br><span class="line">Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true</span><br><span class="line"></span><br><span class="line">&gt; Task :buildExtension</span><br><span class="line"></span><br><span class="line">Created task &#x27;:buildExtension&#x27; property &#x27;archiveBaseName&#x27;.task &#x27;:buildExtension&#x27; property &#x27;archiveExtension&#x27; in task &#x27;:buildExtension&#x27; property &#x27;destinationDirectory&#x27;</span><br><span class="line"></span><br><span class="line">BUILD SUCCESSFUL in 560ms</span><br><span class="line">5 actionable tasks: 3 executed, 2 up-to-date</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.staticaly.com/gh/SunnyYANGyaya/picx-images-hosting@master/20230820/Snipaste_2023-08-16_21-13-45.2x1tlhpa4060.webp" alt="Snipaste_2023-08-16_21-13-45"></p>
+<p>下一步，打开ghidra把他装进去<br>事先把这个zip文件放到&#x2F;home&#x2F;kali&#x2F;ghidra_first&#x2F;ghidra_10.3.1_PUBLIC&#x2F;Ghidra&#x2F;Extensions&#x2F;文件夹下面<br>file -&gt;install extentions -&gt;点击加号，重启即可</p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>参考</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/llzhang_fly/article/details/104980029">https://blog.csdn.net/llzhang_fly/article/details/104980029</a> source &#x2F;etc&#x2F;profile 文件的作用：linux下使用source &#x2F;etc&#x2F;profile保存配置后，新的环境变量只能在一个终端里面有效。但是，当时想的是反正只用一次，所以我就没管了</p>
+<p>附上固件下载地址来源：<a target="_blank" rel="noopener" href="https://github.com/smile-e3/FirmwaresAddress">smile-e3&#x2F;FirmwaresAddress: IOT设备固件下载地址 (github.com)</a></p>
+<blockquote>
+<p>通用固件下载地址，不仅包含路由器和摄像头。<a target="_blank" rel="noopener" href="https://drivers.softpedia.com/manufacturers/">https://drivers.softpedia.com/manufacturers/</a></p>
+<p>D-Link固件地址 <a target="_blank" rel="noopener" href="https://tsd.dlink.com.tw/">https://tsd.dlink.com.tw/</a></p>
+<p>海康威视固件地址 <a target="_blank" rel="noopener" href="https://www.hikvisioneurope.com/eu/">https://www.hikvisioneurope.com/eu/</a></p>
+<p>LILIN 摄像头固件下载地址 <a target="_blank" rel="noopener" href="https://www.meritlilin.com/en/support/file/type/Firmware">https://www.meritlilin.com/en/support/file/type/Firmware</a></p>
+<p>TP-Link固件下载地址 <a target="_blank" rel="noopener" href="https://www.tp-link.com/us/choose-your-location/">https://www.tp-link.com/us/choose-your-location/</a></p>
+<p>ipTIME固件下载地址 <a target="_blank" rel="noopener" href="http://iptime.com/iptime/?page_id=126">http://iptime.com/iptime/?page_id=126</a></p>
+<p>下载英特尔® 驱动程序和软件 (intel.cn) <a target="_blank" rel="noopener" href="https://www.intel.cn/content/www/cn/zh/download-center/home.html">https://www.intel.cn/content/www/cn/zh/download-center/home.html</a></p>
+</blockquote>
+<p>目前找到的密码学库的说明文档</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://mbed-tls.readthedocs.io/projects/api/en/v3.4.1/">Mbed TLS API documentation — Mbed TLS Versioned documentation (mbed-tls.readthedocs.io)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.openssl.org/">&#x2F;index.html (openssl.org)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.openbsd.org/">OpenBSD</a></p>
+</blockquote>
+<p>同类型的脚本</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/AllsafeCyberSecurity/py-findcrypt-ghidra">AllsafeCyberSecurity&#x2F;py-findcrypt-ghidra: FindCrypt for Ghidra written in Python (github.com)</a></p>
+</blockquote>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/" rel="tag">tools</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-用DFS的方法求图连通分量个数"
   class="article article-type-post"
   itemscope

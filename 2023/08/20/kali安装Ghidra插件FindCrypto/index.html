@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>用DFS的方法求图连通分量个数 |  我叫SunnyYang</title>
+      <title>kali安装Ghidra插件FindCrypto |  我叫SunnyYang</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="https://cdn.staticaly.com/gh/SunnyYANGyaya/picx-images-hosting@master/20230718/1-head.1h4duchfots0.webp" />
@@ -64,7 +64,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-用DFS的方法求图连通分量个数"
+  id="post-kali安装Ghidra插件FindCrypto"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -75,7 +75,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  用DFS的方法求图连通分量个数
+  kali安装Ghidra插件FindCrypto
 </h1>
  
 
@@ -83,15 +83,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/08/01/%E7%94%A8DFS%E7%9A%84%E6%96%B9%E6%B3%95%E6%B1%82%E5%9B%BE%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E4%B8%AA%E6%95%B0/" class="article-date">
-  <time datetime="2023-08-01T07:32:49.000Z" itemprop="datePublished">2023-08-01</time>
+      <a href="/2023/08/20/kali%E5%AE%89%E8%A3%85Ghidra%E6%8F%92%E4%BB%B6FindCrypto/" class="article-date">
+  <time datetime="2023-08-20T11:37:58.000Z" itemprop="datePublished">2023-08-20</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">516</span>
+            <span class="post-count">757</span>
         </span>
     </span>
 
@@ -100,7 +100,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">2 min</span>
+            <span class="post-count">3 min</span>
         </span>
     </span>
 </div>
@@ -115,21 +115,42 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="用DFS的方法求图中连通分量的个数"><a href="#用DFS的方法求图中连通分量的个数" class="headerlink" title="用DFS的方法求图中连通分量的个数"></a>用DFS的方法求图中连通分量的个数</h1><p>原本很简单的一题思考了很久，这就是写伪代码写多了的后果<br>很多关于道路的题目，什么顶点相连接的题目都能用到关于图的方法</p>
-<p>先讲最最基本的没有任何优化的方法，优化后续考虑</p>
-<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>初始化一个二维数组用来存储无向图<code>G[ ][ ]</code></p>
-<p>初始化记录连通分量个数的int count&#x3D;0</p>
-<p>从任意顶点开始DFS，<strong>通过这个顶点遍历到的所有顶点都属于同一个连通分量</strong>，对于DFS的细节：这些遍历到的顶点要做好标记，表示已经被访问过</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span> k)</span>&#123;</span><br><span class="line">    visited[k]=<span class="number">1</span>;</span><br><span class="line">    <span class="comment">//记录所属的连通分量的编号</span></span><br><span class="line">    <span class="comment">//id[k]=cnt2;</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(G[k][i]==<span class="number">1</span> &amp;&amp; visited[i]==<span class="number">0</span>)&#123;</span><br><span class="line">            cnt++;<span class="comment">//分量内的点的个数</span></span><br><span class="line">            dfs(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  <h1 id="kali安装Ghidra插件FindCrypto"><a href="#kali安装Ghidra插件FindCrypto" class="headerlink" title="kali安装Ghidra插件FindCrypto"></a>kali安装Ghidra插件FindCrypto</h1><h2 id="安装地址"><a href="#安装地址" class="headerlink" title="安装地址"></a>安装地址</h2><p><a target="_blank" rel="noopener" href="https://github.com/d3v1l401/FindCrypt-Ghidra">https://github.com/d3v1l401/FindCrypt-Ghidra</a></p>
+<h2 id="输入命令"><a href="#输入命令" class="headerlink" title="输入命令"></a>输入命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd FindCrypt</span><br><span class="line"></span><br><span class="line">GHIDRA_INSTALL_DIR=/home/kali/ghidra_first/ghidra_10.3.1_PUBLIC  gradle </span><br></pre></td></tr></table></figure>
 
-<p>从没有访问过的顶点取出一个顶点，重复DFS，遍历完成之后count++，这就需要两个函数，不仅仅DFS，还有一个计数函数</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">count</span><span class="params">(<span class="type">int</span> n)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(visited[i]==<span class="number">0</span>)&#123;</span><br><span class="line">            dfs(i);</span><br><span class="line">            cnt2++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="报错处理"><a href="#报错处理" class="headerlink" title="报错处理"></a>报错处理</h2><p>但是gradle版本过低出现报错<br>What went wrong:<br>A problem occurred evaluating script.<br>Requires at least Gradle 7.3, but was run with 4.4.1<br><strong>不要</strong>直接sudo apt install gradle，这样永远都是下载4.4.1版本的，于是要下载高版本的gradle<br><a target="_blank" rel="noopener" href="https://services.gradle.org/distributions/">https://services.gradle.org/distributions/</a><br><strong>不能</strong>这样替换，会报错，不要这么干，这是某个csdn上的，自己尝试是不行的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo cp -r /usr/share/gradle /usr/share/gradle_bak</span><br><span class="line">sudo cp -r ./gradle-6.9/* /usr/share/gradle </span><br><span class="line">#复制完成后执行下面一条命令，确认版本是否替换： </span><br><span class="line">gradle -v</span><br></pre></td></tr></table></figure>
+<p><strong>我的</strong>正确做法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">解压下载好的zip文件，然后开始配置环境变量</span><br><span class="line">在 /etc/profile.d下创建 gradle.sh文件</span><br><span class="line">export GRADLE_HOME=/home/kali/file/gradle-7.3</span><br><span class="line">export PATH=$PATH:$GRADLE_HOME/bin</span><br><span class="line">export GRADLE_USER_HOME=/home/kali/file/gradle-7.3/bin/.gradle</span><br><span class="line"></span><br><span class="line">/etc/profile也需要加入内容</span><br><span class="line">#gradle</span><br><span class="line">export PATH=$PATH:/soft/gradle-6.5.1/bin</span><br><span class="line"></span><br><span class="line">修改配置后，立即生效，执行</span><br><span class="line">source /etc/profile</span><br><span class="line">[为什么每次进入命令都要重新source /etc/profile 才能生效？[https://blog.csdn.net/lwplvx/article/details/79192182](https://blog.csdn.net/lwplvx/article/details/79192182)]</span><br><span class="line"></span><br><span class="line">[source /etc/profile作用](https://blog.csdn.net/llzhang_fly/article/details/104980029)</span><br><span class="line">查看gradle的版本信息 </span><br><span class="line">gradle -version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>输出count，这个就是图中连通分量的个数（cnt2）</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>题目链接：<a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/3722/">3719. 畅通工程 - AcWing题库</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int cnt=0,cnt2=0,n,m,cin1,cin2;</span><br><span class="line">int visited[1000];</span><br><span class="line">int G[1005][1005];</span><br><span class="line">void dfs(int k)&#123;</span><br><span class="line">    visited[k]=1;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        if(G[k][i]==1 &amp;&amp; visited[i]==0)&#123;</span><br><span class="line">            cnt++;//分量内的点的个数</span><br><span class="line">            dfs(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void count(int n)&#123;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        if(visited[i]==0)&#123;</span><br><span class="line">            dfs(i);</span><br><span class="line">            cnt2++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    //memset(visited,0,sizeof(visited));</span><br><span class="line">    //memset(G,0,sizeof(G));</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    for(int i=0;i&lt;m;i++)&#123;</span><br><span class="line">        cin &gt;&gt; cin1 &gt;&gt; cin2;</span><br><span class="line">        G[cin1][cin2]=1;</span><br><span class="line">        G[cin2][cin1]=1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //dfs(1);</span><br><span class="line">    count(n);</span><br><span class="line">    //cout &lt;&lt; cnt &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; cnt2-1 &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40438165/article/details/88540261">https://blog.csdn.net/qq_40438165/article/details/88540261</a></p>
+<p> gradle安好了，再次重复：一定不能用sudo的方法<br><img src="https://cdn.staticaly.com/gh/SunnyYANGyaya/picx-images-hosting@master/20230820/Snipaste_2023-08-16_20-38-45.3v0jqe5hfc80.webp" alt="Snipaste_2023-08-16_20-38-45"></p>
+<h2 id="继续"><a href="#继续" class="headerlink" title="继续"></a>继续</h2><p>但是findcrypt依然不能build<br><img src="https://cdn.staticaly.com/gh/SunnyYANGyaya/picx-images-hosting@master/20230820/Snipaste_2023-08-16_20-58-39.1eixx3zak0o0.webp" alt="Snipaste_2023-08-16_20-58-39"></p>
+<p>仔细看了一下报错信息，把help文件夹给删掉了，然后就好了，好像也不影响后面的插件导入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ GHIDRA_INSTALL_DIR=/home/kali/ghidra_first/ghidra_10.3.1_PUBLIC  gradle</span><br><span class="line">Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true</span><br><span class="line"></span><br><span class="line">&gt; Task :buildExtension</span><br><span class="line"></span><br><span class="line">Created task &#x27;:buildExtension&#x27; property &#x27;archiveBaseName&#x27;.task &#x27;:buildExtension&#x27; property &#x27;archiveExtension&#x27; in task &#x27;:buildExtension&#x27; property &#x27;destinationDirectory&#x27;</span><br><span class="line"></span><br><span class="line">BUILD SUCCESSFUL in 560ms</span><br><span class="line">5 actionable tasks: 3 executed, 2 up-to-date</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.staticaly.com/gh/SunnyYANGyaya/picx-images-hosting@master/20230820/Snipaste_2023-08-16_21-13-45.2x1tlhpa4060.webp" alt="Snipaste_2023-08-16_21-13-45"></p>
+<p>下一步，打开ghidra把他装进去<br>事先把这个zip文件放到&#x2F;home&#x2F;kali&#x2F;ghidra_first&#x2F;ghidra_10.3.1_PUBLIC&#x2F;Ghidra&#x2F;Extensions&#x2F;文件夹下面<br>file -&gt;install extentions -&gt;点击加号，重启即可</p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>参考</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/llzhang_fly/article/details/104980029">https://blog.csdn.net/llzhang_fly/article/details/104980029</a> source &#x2F;etc&#x2F;profile 文件的作用：linux下使用source &#x2F;etc&#x2F;profile保存配置后，新的环境变量只能在一个终端里面有效。但是，当时想的是反正只用一次，所以我就没管了</p>
+<p>附上固件下载地址来源：<a target="_blank" rel="noopener" href="https://github.com/smile-e3/FirmwaresAddress">smile-e3&#x2F;FirmwaresAddress: IOT设备固件下载地址 (github.com)</a></p>
+<blockquote>
+<p>通用固件下载地址，不仅包含路由器和摄像头。<a target="_blank" rel="noopener" href="https://drivers.softpedia.com/manufacturers/">https://drivers.softpedia.com/manufacturers/</a></p>
+<p>D-Link固件地址 <a target="_blank" rel="noopener" href="https://tsd.dlink.com.tw/">https://tsd.dlink.com.tw/</a></p>
+<p>海康威视固件地址 <a target="_blank" rel="noopener" href="https://www.hikvisioneurope.com/eu/">https://www.hikvisioneurope.com/eu/</a></p>
+<p>LILIN 摄像头固件下载地址 <a target="_blank" rel="noopener" href="https://www.meritlilin.com/en/support/file/type/Firmware">https://www.meritlilin.com/en/support/file/type/Firmware</a></p>
+<p>TP-Link固件下载地址 <a target="_blank" rel="noopener" href="https://www.tp-link.com/us/choose-your-location/">https://www.tp-link.com/us/choose-your-location/</a></p>
+<p>ipTIME固件下载地址 <a target="_blank" rel="noopener" href="http://iptime.com/iptime/?page_id=126">http://iptime.com/iptime/?page_id=126</a></p>
+<p>下载英特尔® 驱动程序和软件 (intel.cn) <a target="_blank" rel="noopener" href="https://www.intel.cn/content/www/cn/zh/download-center/home.html">https://www.intel.cn/content/www/cn/zh/download-center/home.html</a></p>
+</blockquote>
+<p>目前找到的密码学库的说明文档</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://mbed-tls.readthedocs.io/projects/api/en/v3.4.1/">Mbed TLS API documentation — Mbed TLS Versioned documentation (mbed-tls.readthedocs.io)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.openssl.org/">&#x2F;index.html (openssl.org)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.openbsd.org/">OpenBSD</a></p>
+</blockquote>
+<p>同类型的脚本</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/AllsafeCyberSecurity/py-findcrypt-ghidra">AllsafeCyberSecurity&#x2F;py-findcrypt-ghidra: FindCrypt for Ghidra written in Python (github.com)</a></p>
+</blockquote>
  
       <!-- reward -->
       
@@ -194,12 +215,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/08/01/%E7%94%A8DFS%E7%9A%84%E6%96%B9%E6%B3%95%E6%B1%82%E5%9B%BE%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E4%B8%AA%E6%95%B0/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/08/20/kali%E5%AE%89%E8%A3%85Ghidra%E6%8F%92%E4%BB%B6FindCrypto/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BB%83%E4%B9%A0/" rel="tag">练习</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/" rel="tag">tools</a></li></ul>
 
     </footer>
   </div>
@@ -207,19 +228,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/08/20/kali%E5%AE%89%E8%A3%85Ghidra%E6%8F%92%E4%BB%B6FindCrypto/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            kali安装Ghidra插件FindCrypto
-          
-        </div>
-      </a>
     
-    
-      <a href="/2023/07/29/%E5%9C%A8kali%E5%AE%89%E8%A3%85docker/" class="article-nav-link">
+      <a href="/2023/08/01/%E7%94%A8DFS%E7%9A%84%E6%96%B9%E6%B3%95%E6%B1%82%E5%9B%BE%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E4%B8%AA%E6%95%B0/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">在kali安装docker</div>
+        <div class="article-nav-title">用DFS的方法求图连通分量个数</div>
       </a>
     
   </nav>
